@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/mainstyle.css">
+    <link rel="stylesheet" href="./landingassets/mainstyle.css">
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar is-full-height" aria-label="main navigation">
+        <nav class="navbar is-spaced" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="#home">
-                    <img src="./assets/genericlogo.jpg" alt="logo">
+                    <img src="./landingassets/genericlogo.jpg" alt="logo">
                 </a>
             </div>
         </nav>
@@ -25,82 +25,82 @@
     <!-- <div id="page-container">
         <div id="content-wrap"> -->
 
-            <section class="section">
-                <div class="container">
-                    <h1 class="title">
-                        Welcome
-                    </h1>
-                    <p class="subtitle">
-                        TAKE YOUR TIME & <strong>LOOK AROUND</strong>!
-                    </p>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Welcome
+            </h1>
+            <p class="subtitle">
+                TAKE YOUR TIME & <strong>LOOK AROUND</strong>!
+            </p>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="box">
+            <div id="color">
+                <p>To begin, pick a color that you <strong>gravitate</strong> towards:</p>
+                <hr>
+            </div>
+            <div class="dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span id="colorchoice">Color Choice</span>
+                        <span class="icon is-small">
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </button>
                 </div>
 
-                <br>
-                <br>
-
-                <div class="box">
-                    <div id="color">
-                        <p>To begin, pick a color that you <strong>gravitate</strong> towards:</p>
-                        <hr>
-                    </div>
-                    <div class="dropdown is-hoverable">
-                        <div class="dropdown-trigger">
-                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span>Color Choice</span>
-                                <span class="icon is-small">
-                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </button>
-                        </div>
-
-                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                            <div class="dropdown-content">
-                                <a href="#" class="dropdown-item">
-                                    Orange
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    Gold
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    Green
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    Blue
-                                </a>                               
-                            </div>
-                        </div>
-                    </div>
-                    <input class="button is-success is-full-height" id="colorinput" type="submit" value="Submit">
-                </div>
-                
-                <br>
-                <br>
-
-                <div class="box">
-                    Enter your <strong>City & State</strong>:
-                    <hr>
-                    <div class="field has-addons" id="location">
-                        <div class="control">
-                            <input class="input" id="citystate" type="text" placeholder="City + State">
-                        </div>
-                        <div class="control">
-                            <a class="button is-info">
-                                Submit
-                            </a>
-                        </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">
+                            Orange
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            Gold
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            Green
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            Blue
+                        </a>
                     </div>
                 </div>
-            </section>
+            </div>
+            <input class="button is-success is-full-height" id="colorinput" type="submit" value="Submit">
+        </div>
 
-            <footer class="footer">
-                <div class="content has-text-centered">
-                    <p>
-                        <strong>-.-.-.-</strong> 2023
-                    </p>
+        <br>
+        <br>
+
+        <div class="box">
+            Enter your <strong>City & State</strong>:
+            <hr>
+            <div class="field has-addons" id="location">
+                <!-- <div class="control"> -->
+                    <input class="input" id="citystate" type="text" placeholder="City + State">
                 </div>
-            </footer>
+                <!-- <div class="control"> -->
+                    <!-- <input class="button is-info" id="" type="submit" value="Submit"> -->
+                <!-- </div> -->
+                <input class="button is-info" id="" type="submit" value="Submit">
+            <!-- </div> -->
+        </div>
+    </section>
 
-            
-            <script src="./assets/mainscript.js"></script>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>-.-.-.-</strong> 2023
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="./landingassets/mainscript.js"></script>
 </body>
+
 </html>
