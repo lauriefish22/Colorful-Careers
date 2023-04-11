@@ -1,18 +1,16 @@
 // Pseudo code 
-// user enters zip code and writting sample 
-// return different levels of personality 
-// choose the big 5 
-// store those into an object
-// whichever one is bigger use as the main
-//  return whichever one is bigger 
-// if statement for whichever one is bigger if > &&&
-// then display these five/three options 
-// on click of each one then 
-// use that click as the query parameter for jobs near 
-// also use the users stored zip code as a search parameter 
+// choose color store this user variable in local storage
+// type in location store this variable in local storage 
+// on submit button click change locations to other html
+// create an object with answers or create an array that contains different 
+// create an array of objects with color job key value pairs 
+// if statement if usercolor input ==== red then job = red job
+// text content of header is random joke of the day
+// text content of header is information about what each color means 
+//  body of doc contains cards for the first 10 job items 
 
-// var chosenOptions; //array or object to contain job options based on each major personality
-// for(var i = 0; i<chosenOptions.length;i++){
+// reach styling of background is a variation of the color that the user chose
+// reach a tag on the whole card so that the whole thing is a link to the job of their choice
 
 
 
