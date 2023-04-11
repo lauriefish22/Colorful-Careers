@@ -23,7 +23,6 @@ body{
 
 .footer {
     background-color: hsl(171, 100%, 41%); 
-    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;

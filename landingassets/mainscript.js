@@ -24,10 +24,11 @@
 //     localStorage.setItem("color", color);
 //     // console.log("color stored!");
 // });
-
+var cityStateBtn = document.getElementById("citystate-btn");
 document.getElementsByClassName("button is-info")[0].addEventListener("click", myFunction);
 
 function myFunction(){
+    
     var citystate = document.getElementById("citystate").value;
     localStorage.setItem("citystate", citystate);
     console.log(citystate);
@@ -38,9 +39,9 @@ function myFunction(){
 var colorInput = document.getElementById("colorinput");
 var colorChoice = document.getElementById("colorchoice");
 var dropdownMenu = document.getElementById("dropdown-menu");
-
+var chosenColor;
 colorInput.addEventListener("click", function () { 
-    var chosenColor = colorChoice.innerHTML;
+    chosenColor = colorChoice.innerHTML;
     console.log(chosenColor);
     localStorage.setItem("chosenColor", chosenColor);
     colorInput.setAttribute('disabled', true);
@@ -51,4 +52,14 @@ dropdownMenu.addEventListener("click", function (event) {
     colorChoice.innerHTML = chosenColor;
 });
 
+cityStateBtn.addEventListener("click",function(){
+    if(document.getElementById("citystate").value ===""){
+        return
+    }
+    if(!chosenColor){
+        return
+    }
+    document.location = "plant.html"
+}
+)
 
