@@ -40,8 +40,9 @@ var colorInput = document.getElementById("colorinput");
 var colorChoice = document.getElementById("colorchoice");
 var dropdownMenu = document.getElementById("dropdown-menu");
 var chosenColor;
-colorInput.addEventListener("click", function () { 
-    chosenColor = colorChoice.innerHTML;
+colorInput.addEventListener("click", function (event) { 
+    var colorChoice = document.getElementById("colorchoice");
+    chosenColor = colorChoice.textContent;
     console.log(chosenColor);
     localStorage.setItem("chosenColor", chosenColor);
     colorInput.setAttribute('disabled', true);
