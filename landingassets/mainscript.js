@@ -43,6 +43,7 @@ colorInput.addEventListener("click", function () {
     var chosenColor = colorChoice.innerHTML;
     console.log(chosenColor);
     localStorage.setItem("chosenColor", chosenColor);
+    colorInput.setAttribute('disabled', true);
 });
 
 dropdownMenu.addEventListener("click", function (event) {
