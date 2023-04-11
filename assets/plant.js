@@ -22,9 +22,24 @@
 
 var jobOptions = document.getElementById("job-options")
 function getJob() {
-
-    var city = "santa barbara"
-    var job = "chef"
+    var job;
+    var userColor = localStorage.getItem("chosenColor")
+    console.log("The user chose " + userColor);
+    if(userColor ==="Gold"){
+        job = "teacher"
+    }
+    if(userColor ==="Orange"){
+        job = "lawyer"
+    }
+    if(userColor ==="Green"){
+        job = "Web developer"
+    }
+    if(userColor ==="Blue"){
+        job = "chef"
+    }
+    console.log(job)
+    var city = localStorage.getItem("citystate")
+    
     var search = job + " " + city
     fetch('https://jsearch.p.rapidapi.com/search?query=' + search + '&page=1&num_pages=1',
         {
@@ -34,7 +49,7 @@ function getJob() {
                 'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
             }
         })
-	.then(response => response.json())
+        .then(response => response.json())
         .then(function (data) {
             console.log(data)
 
@@ -42,7 +57,7 @@ function getJob() {
             jobOptions.textContent = ""
             // console.log(data.data)
             for (var i = 0; i < data.data.length; i++) {
-                
+
                 jobOptions.innerHTML += ` 
     <div class="card column is-3">
     <div class="card-image">
@@ -69,10 +84,10 @@ function getJob() {
 `
 
 
-            
-        }
+
+            }
         })
-        .catch(function(err){
+        .catch(function (err) {
             console.error(err);
         })
 }
