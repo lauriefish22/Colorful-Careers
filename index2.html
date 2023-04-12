@@ -27,29 +27,74 @@
                 <div class="modal-card">
                     <header class="modal-card-head">
                         <p class="modal-card-title"></p>
-                        <button class="delete" aria-label="close"></button>
+                        <button class="modal-close is-large" aria-label="close"></button>
                     </header>
 
                     <section class="modal-card-body">
                         <div class="content">
+
                             <h1 class="has-text-link">Blue</h1>
-                            <p>
-                                Learn all about blue.
-                            </p>
+                            <a href="javascript: void(0);" onClick="toggle('q1')">
+                                Learn all about Blue.
+                            </a>
+                            <div id="q1" style="display:none;">
+                                <pre>If you're a blue personality, you may tend to be enthusiastic, 
+sympathetic, communicative, compassionate, idealistic, sincere and 
+imaginative. You value relationships and working closely with others. 
+Colleagues will likely appreciate your compassion and sincerity and 
+how quick you are to help during challenges. You appreciate 
+opportunities to demonstrate creativity, work with and mentor others 
+and communicate.</pre>
+For more info:
+<cite><a href="https://www.indeed.com/career-advice/finding-a-job/color-psychology-test">Indeed: How To Use Color Psychology Tests To Explore Career Options</a></cite>
+                            </div>
 
                             <h1 class="has-text-warning">Gold</h1>
-                            <p>
-                                Learn all about gold.
-                            </p>
-                            <h1 class="has-text-success-dark">Gold</h1>
-                            <p>
-                                Learn all about green.
-                            </p>
-                            <h1 class="has-text-warning">Gold</h1>
-                            <p>
-                                Learn all about orange.
-                            </p>
-                            </ul>
+                            <a href="javascript: void(0);" onClick="toggle('q2')">
+                                Learn all about Gold.
+                            </a>
+                            <div id="q2" style="display:none;">
+                                <pre>As a Gold personality type, you are likely highly organized and detail
+oriented. You might have a good memory for facts, statistics and 
+deadlines, which could make coworkers more likely to rely on you when 
+working on projects. This personality often makes smart financial 
+decisions and likes to have things balanced and on track. You 
+appreciate opportunities to take and display responsibilities, be a 
+service to others, demonstrate leadership and organize things or people.</pre>
+For more info:
+<cite><a href="https://www.indeed.com/career-advice/finding-a-job/color-psychology-test">Indeed: How To Use Color Psychology Tests To Explore Career Options</a></cite>
+                            </div>
+
+                            <h1 class="has-text-success">Green</h1>
+                            <a href="javascript: void(0);" onClick="toggle('q3')">
+                                Learn all about Green.
+                            </a>
+                            <div id="q3" style="display:none;">
+                                <pre>If you fit in the green category, you probably tend to be a 
+perfectionist and, analytical, conceptual, cool, calm, inventive and 
+logical. Your ability to see multiple sides of an issue can make you 
+adept at problem-solving, especially when working with a team. As a 
+green personality, you might highly value feedback because it gives 
+you a chance to develop your skills.</pre>
+For more info:
+<cite><a href="https://www.indeed.com/career-advice/finding-a-job/color-psychology-test">Indeed: How To Use Color Psychology Tests To Explore Career Options</a></cite>
+                            </div>
+
+                            <h1 class="has-text-danger">Orange</h1>
+                            <a href="javascript: void(0);" onClick="toggle('q4')">
+                                Learn all about Orange.
+                            </a>
+                            <div id="q4" style="display:none;">
+                                <pre>If you're an orange personality, you likely tend to be witty, 
+spontaneous, generous, optimistic, eager and bold. You enjoy the 
+freedom and ability to be spontaneous. You will generally have a 
+positive outlook on life and high amounts of energy. In your career, 
+you may value offering creative solutions to workplace challenges. 
+You prefer flexibility in choosing how tasks are completed.</pre>
+For more info:
+<cite><a href="https://www.indeed.com/career-advice/finding-a-job/color-psychology-test">Indeed: How To Use Color Psychology Tests To Explore Career Options</a></cite>
+                            
+                            </div>
                         </div>
                     </section>
 
@@ -68,6 +113,14 @@
             $("html").removeClass("is-clipped");
             $(this).parent().removeClass("is-active");
         });
+    </script>
+
+    <script type="text/javascript">
+        function toggle(obj) {
+            var obj = document.getElementById(obj);
+            if (obj.style.display == "block") obj.style.display = "none";
+            else obj.style.display = "block";
+        }
     </script>
 
 </body>
