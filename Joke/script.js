@@ -1,37 +1,34 @@
 APIkey = 'cc0e5ff229msha7a08edcb4e2fa7p13c5b7jsn7c2c39bc9ff4';
-let urlQuery = 'https://dad-jokes.p.rapidapi.com/random/joke';
-let jokeButton = document.getElementById('joke-button');
-let jokeQuestion = document.getElementById('joke-start');
+let urlQuery = 'https://daddyjokes.p.rapidapi.com/random';
 
+//function printJoke() {
 fetch(urlQuery, {
     method: 'GET',
     headers: {
         'X-RapidAPI-Key': APIkey,
-        'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
+        'X-RapidAPI-Host': 'daddyjokes.p.rapidapi.com'
     }
 })
-
-
 
     .then(function (response) {
         return response.json()
     })
     .then(function (response) {
-
-        let jokeOfTheDay = response.body[0].setup;
-        console.log(jokeOfTheDay);
-        jokeQuestion.textContent = jokeOfTheDay.value();
-
+        console.log(response);
+        console.log(response.joke)
+        let newJoke = (response.joke);
+        let newJokeContainer = document.getElementById('joke-start');
+        //newJokeContainer.innerHTML = newJoke;
+        let button = document.getElementById("button");
+        button.addEventListener('click', function (e) {
+            newJokeContainer.innerHTML = newJoke;
+        });
 
     })
+
     .catch(function (err) {
-        console.error(err)
-    });
-
-
-
-
-
+        console.error(err);
+    })
 
 
 

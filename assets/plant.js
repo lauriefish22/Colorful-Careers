@@ -31,7 +31,7 @@ function getJob() {
     if(userColor ==="Orange"){
         job = "Journalist"
     }
-    if(userColor ==="Green"){
+    if (userColor === "Green") {
         job = "Web developer"
     }
     if(userColor ==="Blue"){
@@ -39,13 +39,13 @@ function getJob() {
     }
     console.log(job)
     var city = localStorage.getItem("citystate")
-    
+
     var search = job + " " + city
     fetch('https://jsearch.p.rapidapi.com/search?query=' + search + '&page=1&num_pages=1',
         {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '4b40e0fa57msha34ad412a63ed67p1b9489jsn815115d28ee6',
+                'X-RapidAPI-Key': 'cc0e5ff229msha7a08edcb4e2fa7p13c5b7jsn7c2c39bc9ff4',
                 'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
             }
         })
