@@ -10,12 +10,9 @@
 //  body of doc contains cards for the first 10 job items 
 
 // reach styling of background is a variation of the color that the user chose
-// reach a tag on the whole card so that the whole thing is a link to the job of their choice
 
 
 
-// var apiKey = '4b40e0fa57msha34ad412a63ed67p1b9489jsn815115d28ee6';
-// var requestUrl = 'https://jsearch.p.rapidapi.com/search?query='+job+apiKey
 
 APIkey = 'cc0e5ff229msha7a08edcb4e2fa7p13c5b7jsn7c2c39bc9ff4';
 let urlQuery = 'https://daddyjokes.p.rapidapi.com/random';

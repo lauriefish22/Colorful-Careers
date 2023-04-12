@@ -60,7 +60,7 @@ cityStateBtn.addEventListener("click",function(){
     if(!chosenColor){
         return
     }
-    document.location = "plant.html"
+    document.location = "job.html"
 }
 )
 
