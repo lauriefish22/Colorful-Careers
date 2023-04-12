@@ -37,7 +37,7 @@ fetch(urlQuery, {
         //newJokeContainer.innerHTML = newJoke;
         // let button = document.getElementById("button");
         // button.addEventListener('click', function (e) {
-            newJokeContainer.innerHTML = newJoke;
+        newJokeContainer.innerHTML = newJoke;
         // });
 
     })
@@ -189,4 +189,16 @@ document.addEventListener('DOMContentLoaded', () => {
             closeAllModals();
         }
     });
+});
+
+anime({
+    targets: '.button',
+    translateY: [
+        { value: 300, duration: 800 },
+        { value: 0, duration: 800 }
+    ],
+    rotate: {
+        value: '1turn',
+        easing: 'easeInOutSine'
+    }
 });
