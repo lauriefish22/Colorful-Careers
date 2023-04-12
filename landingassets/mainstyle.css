@@ -28,13 +28,11 @@ body {
 
 .footer {
   background-color: white;
-  position: relative;
   bottom: 0;
   /* left: 0; */
   /* right: 0; */
-  /* height: 2em; */
+  height: 50px;
   width: 100vw;
-  /* padding-top: 1rem; */
 }
 
 /* @media screen and (max-width: 1279px) {
