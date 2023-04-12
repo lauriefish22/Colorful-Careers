@@ -17,6 +17,40 @@
 // var apiKey = '4b40e0fa57msha34ad412a63ed67p1b9489jsn815115d28ee6';
 // var requestUrl = 'https://jsearch.p.rapidapi.com/search?query='+job+apiKey
 
+APIkey = 'cc0e5ff229msha7a08edcb4e2fa7p13c5b7jsn7c2c39bc9ff4';
+let urlQuery = 'https://daddyjokes.p.rapidapi.com/random';
+
+//function printJoke() {
+fetch(urlQuery, {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': APIkey,
+        'X-RapidAPI-Host': 'daddyjokes.p.rapidapi.com'
+    }
+})
+
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (response) {
+        console.log(response);
+        console.log(response.joke)
+        let newJoke = (response.joke);
+        let newJokeContainer = document.getElementById('joke-start');
+        //newJokeContainer.innerHTML = newJoke;
+        // let button = document.getElementById("button");
+        // button.addEventListener('click', function (e) {
+            newJokeContainer.innerHTML = newJoke;
+        // });
+
+    })
+
+    .catch(function (err) {
+        console.error(err);
+    })
+
+
+
 
 
 
@@ -26,16 +60,16 @@ function getJob() {
     var userColor = localStorage.getItem("chosenColor")
     console.log("The user chose " + userColor);
     if (userColor === "Gold") {
-        job = "teacher"
+        job = "Lawyer"
     }
     if (userColor === "Orange") {
-        job = "lawyer"
+        job = "Journalist"
     }
     if (userColor === "Green") {
         job = "Web developer"
     }
     if (userColor === "Blue") {
-        job = "chef"
+        job = "Mediator"
     }
     console.log(job)
     var city = localStorage.getItem("citystate")
@@ -59,9 +93,9 @@ function getJob() {
             for (var i = 0; i < data.data.length; i++) {
 
                 jobOptions.innerHTML += ` 
-    <div class="card column is-3">
+    <div class="card column is-3 m-4">
     <div class="card-image">
-        <figure class="image is-4by3">
+        <figure class="image is-square">
             <img src="${data.data[i].employer_logo || "./assets/smile.jpg"}" alt="Company Logo">
         </figure>
     </div>
