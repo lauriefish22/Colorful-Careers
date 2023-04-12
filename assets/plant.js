@@ -38,10 +38,10 @@ fetch(urlQuery, {
         let newJoke = (response.joke);
         let newJokeContainer = document.getElementById('joke-start');
         //newJokeContainer.innerHTML = newJoke;
-        let button = document.getElementById("button");
-        button.addEventListener('click', function (e) {
+        // let button = document.getElementById("button");
+        // button.addEventListener('click', function (e) {
             newJokeContainer.innerHTML = newJoke;
-        });
+        // });
 
     })
 
@@ -59,16 +59,16 @@ function getJob() {
     var job;
     var userColor = localStorage.getItem("chosenColor")
     console.log("The user chose " + userColor);
-    if(userColor ==="Gold"){
+    if (userColor === "Gold") {
         job = "Lawyer"
     }
-    if(userColor ==="Orange"){
+    if (userColor === "Orange") {
         job = "Journalist"
     }
     if (userColor === "Green") {
         job = "Web developer"
     }
-    if(userColor ==="Blue"){
+    if (userColor === "Blue") {
         job = "Mediator"
     }
     console.log(job)
