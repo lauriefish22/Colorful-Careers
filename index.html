@@ -13,25 +13,31 @@
 <body>
     <section class="section">
         <div class="container">
-            <h1 class="is-size-1 has-text-danger has-text-centered">
-                Finding a job is hard... why not make it fun?
-            </h1>
+            <div class="columns is-centered">
+                <div class="columns is-half">
+                    <h1 class="is-size-1 has-text-danger has-text-centered">
+                        Finding a job is hard... why not make it fun?
+                    </h1>
+                </div>
+            </div>
+            <div class="columns is-centered">
+                <div class="columns is-half mt-2">
+                    <button id="button" class="button is-danger is-rounded">PUSH TO LAUGH!</button>
+                    <P id="joke-start" class="has-text-primary is-size-3 has-text-centered"></P>
+                </div>
+            </div>
 
-            <button id="button" class="button is-danger is-rounded">PUSH TO LAUGH!</button>
-            <P id="joke-start" class="has-text-primary is-size-3 has-text-centered"></P>
 
-        </div>
 
-        <br>
-        <br>
 
-        <div id="job-options" class="m-4 columns is-tablet is-multiline is-4">
-            <button class="button is-large is-fullwidth is-loading is-centered">Loading</button>
+            <div id="job-options" class="m-4 columns is-tablet is-multiline is-4">
+                <button class="button is-large is-fullwidth is-loading is-centered">Loading</button>
+            </div>
+
         </div>
 
 
     </section>
-
 
     <script src="./Assets/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
