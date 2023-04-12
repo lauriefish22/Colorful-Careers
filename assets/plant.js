@@ -26,16 +26,16 @@ function getJob() {
     var userColor = localStorage.getItem("chosenColor")
     console.log("The user chose " + userColor);
     if(userColor ==="Gold"){
-        job = "teacher"
+        job = "Lawyer"
     }
     if(userColor ==="Orange"){
-        job = "lawyer"
+        job = "Journalist"
     }
     if(userColor ==="Green"){
         job = "Web developer"
     }
     if(userColor ==="Blue"){
-        job = "chef"
+        job = "Mediator"
     }
     console.log(job)
     var city = localStorage.getItem("citystate")
@@ -59,9 +59,9 @@ function getJob() {
             for (var i = 0; i < data.data.length; i++) {
 
                 jobOptions.innerHTML += ` 
-    <div class="card column is-3">
+    <div class="card column is-3 m-4">
     <div class="card-image">
-        <figure class="image is-4by3">
+        <figure class="image is-square">
             <img src="${data.data[i].employer_logo || "./assets/smile.jpg"}" alt="Company Logo">
         </figure>
     </div>
