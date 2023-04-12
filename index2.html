@@ -32,24 +32,46 @@
 
                     <section class="modal-card-body">
                         <div class="content">
+
                             <h1 class="has-text-link">Blue</h1>
-                            <p>
-                                Learn all about blue.
-                            </p>
+                            <a href="javascript: void(0);" onClick="toggle('q1')">
+                                Learn all about Blue.
+                            </a>
+                            <div id="q1" style="display:none;">
+                                TEXT WHAT U WILL SEE WHEN CLICKED HERE
+                            </div>
 
                             <h1 class="has-text-warning">Gold</h1>
-                            <p>
-                                Learn all about gold.
-                            </p>
-                            <h1 class="has-text-success-dark">Gold</h1>
-                            <p>
-                                Learn all about green.
-                            </p>
-                            <h1 class="has-text-warning">Gold</h1>
-                            <p>
-                                Learn all about orange.
-                            </p>
-                            </ul>
+                            <a href="javascript: void(0);" onClick="toggle('q2')">
+                                Learn all about Gold.
+                            </a>
+                            <div id="q2" style="display:none;">
+                                TEXT WHAT U WILL SEE WHEN CLICKED HERE
+                            </div>
+
+                            <h1 class="has-text-success">Green</h1>
+                            <a href="javascript: void(0);" onClick="toggle('q3')">
+                                Learn all about Green.
+                            </a>
+                            <div id="q3" style="display:none;">
+                                TEXT WHAT U WILL SEE WHEN CLICKED HERE
+                            </div>
+
+                            <h1 class="has-text-warning-light">Orange</h1>
+                            <a href="javascript: void(0);" onClick="toggle('q4')">
+                                Learn all about Orange.
+                            </a>
+                            <div id="q4" style="display:none;">
+                                <pre>If you're an orange personality, you likely tend to be witty, 
+spontaneous, generous, optimistic, eager and bold. You enjoy the 
+freedom and ability to be spontaneous. You will generally have a 
+positive outlook on life and high amounts of energy. In your career, 
+you may value offering creative solutions to workplace challenges. 
+You prefer flexibility in choosing how tasks are completed.
+More information can be found at
+<cite><a href="https://www.indeed.com/career-advice/finding-a-job/color-psychology-test">Indeed: How To Use Color Psychology Tests To Explore Career Options</a></cite>
+                                </pre>
+                            </div>
                         </div>
                     </section>
 
@@ -68,6 +90,14 @@
             $("html").removeClass("is-clipped");
             $(this).parent().removeClass("is-active");
         });
+    </script>
+
+    <script type="text/javascript">
+        function toggle(obj) {
+            var obj = document.getElementById(obj);
+            if (obj.style.display == "block") obj.style.display = "none";
+            else obj.style.display = "block";
+        }
     </script>
 
 </body>
