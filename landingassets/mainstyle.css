@@ -37,6 +37,11 @@ body {
   padding-top: 1rem;
   color: #fff;
 }
+.button {
+  background-color: red;
+}
+
+   
 
 @media screen and (max-width: 1279px) {
   .navbar {
