@@ -4,10 +4,10 @@
   box-sizing: border-box;
 }
 
-body {  
+body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
   text-align: center;
   width: 100%;
   /* height: 100vh; */
@@ -27,12 +27,11 @@ body {
 }
 
 .footer {
-  background-color: white;
   bottom: 0;
-  /* left: 0; */
-  /* right: 0; */
-  height: 50px;
-  width: 100vw;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
 }
 
 /* @media screen and (max-width: 1279px) {
