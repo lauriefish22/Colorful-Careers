@@ -127,6 +127,7 @@ getJob()
 
 
 
+// modal functionality 
 
 
 $(".modal-button").click(function () {
