@@ -15,6 +15,7 @@ body {
   background-size: 100%;
   background-position: center top, center bottom;
   background-repeat: no-repeat;
+  
 }
 #top{
   color: black;
@@ -54,9 +55,10 @@ footer {
  
 } */
 .button2 {
-  height: 40px;
+  height: 39px;
   text-align: center;
   border-radius: 10%;
+  background-color: hsl(176, 49%, 37%);;
   
 
 }

@@ -1,12 +1,11 @@
 # grow-your-garden
--[Github]()
--[Live Site]()
+-[Github](https://github.com/lauriefish22/grow-your-garden)<br>
+-[Live Site](https://lauriefish22.github.io/grow-your-garden/)
 
 
 ## Pic
-![assets]()
+![assets](./assets/Screenshot%202023-04-12%20at%206.50.05%20PM.png)
 
-## Contributors
 ```-Kakazi Kitenge```<br>
 ```-Shea Schwennicke```<br>
 ```-Laurie Fish```
@@ -79,3 +78,4 @@ We want to take even more stress away from you and make you laugh a bit.  After 
 
 ## Learning Points
 
+It was great for all of us to explore different libraries.  It can be easy to get used to only one "way" but you never know what you are missing out on if you don't experience other libraries and opportunities to either improve your project or make it easier to build.  It was also great practice in using API's and finding out (the hard way) that you may need to go through multiple API's to find the one that works for your project.  More than anything, it was our first experience in working with a group and not only practicing using github and different branches but about communication and helping each other out when needed.  
