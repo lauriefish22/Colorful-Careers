@@ -1,29 +1,7 @@
 
-
-// // Get dropdown-item value
-// var colorValue = document.querySelectorAll(".dropdown-item");
-
-// // Store value in variable
-// let color;
-
-// // Loop through dropdown-items
-// for (let i = 0; i < colorValue.length; i++) {
-//     colorValue[i].addEventListener("click", function() {
-//         color = colorValue[i].innerHTML;
-//         console.log(color);
-//         document.getElementById("color").innerHTML = "You have chosen " + color + "!";
-//     });
-// }
-
-// // Get submit button
-// let submitBtn = document.getElementById("colorinput");
-
-// // Add click listener to submit button
-// submitBtn.addEventListener("click", function() {
-//     // Store value
-//     localStorage.setItem("color", color);
-//     // console.log("color stored!");
-// });
+//Input form
+//Event listener is attached to the submit city/state button
+//Data set to local storage
 var cityStateBtn = document.getElementById("citystate-btn");
 document.getElementsByClassName("button is-info")[0].addEventListener("click", myFunction);
 
@@ -35,7 +13,9 @@ function myFunction(){
 }
 
 
-
+//Event listener set up so that when the user chooses a color that value is stored.
+//The dropdown menu and button are clicked and the user's chosen color is set
+//The value is logged into local storage and the colorInput element, button, is disabled.
 var colorInput = document.getElementById("colorinput");
 var colorChoice = document.getElementById("colorchoice");
 var dropdownMenu = document.getElementById("dropdown-menu");
@@ -47,7 +27,7 @@ colorInput.addEventListener("click", function (event) {
     localStorage.setItem("chosenColor", chosenColor);
     colorInput.setAttribute('disabled', true);
 });
-
+//Event listener is added to the dropdown menu.
 dropdownMenu.addEventListener("click", function (event) {
     var chosenColor = event.target.innerHTML;
     colorChoice.innerHTML = chosenColor;
