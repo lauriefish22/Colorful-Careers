@@ -16,6 +16,17 @@ body {
   background-position: center top, center bottom;
   background-repeat: no-repeat;
 }
+#top{
+  color: black;
+}
+#logo{
+  /* display: inline; */
+  height: 15vh;
+  float: left;
+  margin-right: -8%;
+  margin-top: -2%;
+ 
+}
 
 .box {
   max-width: 35%;
@@ -26,13 +37,15 @@ body {
   padding: 10px;
 }
 
-.footer {
-  background-color: white;
+footer {
+
   bottom: 0;
-  /* left: 0; */
-  /* right: 0; */
-  height: 50px;
-  width: 100vw;
+  
+  padding: 1%;
+  height: 100%;
+  font-size: small;
+  color: black;
+  /* width: 100vw; */
 }
 
 /* @media screen and (max-width: 1279px) {
