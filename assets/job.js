@@ -13,7 +13,6 @@
 
 
 
-
 APIkey = 'cc0e5ff229msha7a08edcb4e2fa7p13c5b7jsn7c2c39bc9ff4';
 let urlQuery = 'https://daddyjokes.p.rapidapi.com/random';
 
@@ -37,7 +36,7 @@ fetch(urlQuery, {
         //newJokeContainer.innerHTML = newJoke;
         // let button = document.getElementById("button");
         // button.addEventListener('click', function (e) {
-            newJokeContainer.innerHTML = newJoke;
+        newJokeContainer.innerHTML = newJoke;
         // });
 
     })
@@ -45,8 +44,6 @@ fetch(urlQuery, {
     .catch(function (err) {
         console.error(err);
     })
-
-
 
 
 
@@ -76,7 +73,7 @@ function getJob() {
         {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'cc0e5ff229msha7a08edcb4e2fa7p13c5b7jsn7c2c39bc9ff4',
+                'X-RapidAPI-Key': '2a85d5b83amsh63ca45e7faf958fp1fa3e8jsnb8946c519ebe',
                 'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
             }
         })
@@ -127,66 +124,68 @@ getJob()
 
 
 
+// modal functionality 
 
 
-$(".modal-button").click(function () {
-    var target = $(this).data("target");
-    $("html").addClass("is-clipped");
-    $(target).addClass("is-active");
-});
+// $(".modal-button").click(function () {
+//     var target = $(this).data("target");
+//     $("html").addClass("is-clipped");
+//     $(target).addClass("is-active");
+// });
 
-$(".modal-close").click(function () {
-    $("html").removeClass("is-clipped");
-    $(this).parent().removeClass("is-active");
-});
+// $(".modal-close").click(function () {
+//     $("html").removeClass("is-clipped");
+//     $(this).parent().removeClass("is-active");
+// });
 
-function toggle(obj) {
-    var obj = document.getElementById(obj);
-    if (obj.style.display == "block") obj.style.display = "none";
-    else obj.style.display = "block";
-}
+// function toggle(obj) {
+//     var obj = document.getElementById(obj);
+//     if (obj.style.display == "block") obj.style.display = "none";
+//     else obj.style.display = "block";
+// }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Functions to open and close a modal
-    function openModal($el) {
-        $el.classList.add('is-active');
-    }
+// document.addEventListener('DOMContentLoaded', () => {
+//     // Functions to open and close a modal
+//     function openModal($el) {
+//         $el.classList.add('is-active');
+//     }
 
-    function closeModal($el) {
-        $el.classList.remove('is-active');
-    }
+//     function closeModal($el) {
+//         $el.classList.remove('is-active');
+//     }
 
-    function closeAllModals() {
-        (document.querySelectorAll('.modal') || []).forEach(($modal) => {
-            closeModal($modal);
-        });
-    }
+//     function closeAllModals() {
+//         (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+//             closeModal($modal);
+//         });
+//     }
 
-    // Add a click event on buttons to open a specific modal
-    (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
-        const modal = $trigger.dataset.target;
-        const $target = document.getElementById(modal);
+//     // Add a click event on buttons to open a specific modal
+//     (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+//         const modal = $trigger.dataset.target;
+//         const $target = document.getElementById(modal);
 
-        $trigger.addEventListener('click', () => {
-            openModal($target);
-        });
-    });
+//         $trigger.addEventListener('click', () => {
+//             openModal($target);
+//         });
+//     });
 
-    // Add a click event on various child elements to close the parent modal
-    (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
-        const $target = $close.closest('.modal');
+//     // Add a click event on various child elements to close the parent modal
+//     (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+//         const $target = $close.closest('.modal');
 
-        $close.addEventListener('click', () => {
-            closeModal($target);
-        });
-    });
+//         $close.addEventListener('click', () => {
+//             closeModal($target);
+//         });
+//     });
 
-    // Add a keyboard event to close all modals
-    document.addEventListener('keydown', (event) => {
-        const e = event || window.event;
+//     // Add a keyboard event to close all modals
+//     document.addEventListener('keydown', (event) => {
+//         const e = event || window.event;
 
-        if (e.keyCode === 27) { // Escape key
-            closeAllModals();
-        }
-    });
-});
+//         if (e.keyCode === 27) { // Escape key
+//             closeAllModals();
+//         }
+//     });
+// });
+

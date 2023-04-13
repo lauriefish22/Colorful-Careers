@@ -5,8 +5,8 @@
 var cityStateBtn = document.getElementById("citystate-btn");
 document.getElementsByClassName("button is-info")[0].addEventListener("click", myFunction);
 
-function myFunction(){
-    
+function myFunction() {
+
     var citystate = document.getElementById("citystate").value;
     localStorage.setItem("citystate", citystate);
     console.log(citystate);
@@ -20,7 +20,7 @@ var colorInput = document.getElementById("colorinput");
 var colorChoice = document.getElementById("colorchoice");
 var dropdownMenu = document.getElementById("dropdown-menu");
 var chosenColor;
-colorInput.addEventListener("click", function (event) { 
+colorInput.addEventListener("click", function (event) {
     var colorChoice = document.getElementById("colorchoice");
     chosenColor = colorChoice.textContent;
     console.log(chosenColor);
@@ -33,14 +33,24 @@ dropdownMenu.addEventListener("click", function (event) {
     colorChoice.innerHTML = chosenColor;
 });
 
-cityStateBtn.addEventListener("click",function(){
-    if(document.getElementById("citystate").value ===""){
+cityStateBtn.addEventListener("click", function () {
+    if (document.getElementById("citystate").value === "") {
         return
     }
-    if(!chosenColor){
+    if (!chosenColor) {
         return
     }
     document.location = "job.html"
 }
 )
-
+anime({
+    targets: '.button',
+    translateY: [
+        { value: 300, duration: 800 },
+        { value: 0, duration: 800 }
+    ],
+    rotate: {
+        value: '1turn',
+        easing: 'easeInOutSine'
+    }
+});

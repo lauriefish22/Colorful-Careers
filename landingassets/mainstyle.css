@@ -10,11 +10,23 @@ body {
   min-height: 100%;
   text-align: center;
   width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   background: linear-gradient(to right, #F2651C 0%, #ffd700 50%, #FFD700 50%, #008DD2 100%);
   background-size: 100%;
   background-position: center top, center bottom;
   background-repeat: no-repeat;
+  
+}
+#top{
+  color: black;
+}
+#logo{
+  /* display: inline; */
+  height: 15vh;
+  float: left;
+  margin-right: -8%;
+  margin-top: -2%;
+ 
 }
 
 .box {
@@ -22,17 +34,53 @@ body {
   margin-left: 30px;
   margin: auto;
   width: 50%;
-  border: 1px solid hsl(171, 100%, 41%);
+  border: 1px solid yellow;
+   /* hsl(171, 100%, 41%); */
   padding: 10px;
 }
 
-.footer {
+footer {
+
   bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: white;
+  
+  padding: 1%;
+  height: 100%;
+  font-size: small;
+  color: black;
+  /* width: 100vw; */
 }
+/* #colorinput {
+  background-color:hsl(176, 49%, 37%);
+  font-family: Arial, Helvetica, sans-serif;
+ 
+} */
+.button2 {
+  height: 39px;
+  text-align: center;
+  border-radius: 10%;
+  background-color: hsl(176, 49%, 37%);;  
+}
+#citystate-btn {
+  background-color: hsl(176, 49%, 37%);;  
+}
+#colorinput {
+  background-color: hsl(176, 49%, 37%);
+  color: white;
+  
+}
+#colorchoice {
+  border-style: solid;
+  border-width: thin;  
+  color: black;
+  padding-left: 2px;
+  margin-left: 2px;
+}
+#citystate {
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+}
+   
 
 /* @media screen and (max-width: 1279px) {
   .navbar {
