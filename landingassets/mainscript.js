@@ -3,14 +3,16 @@
 //Event listener is attached to the submit city/state button
 //Data set to local storage
 var cityStateBtn = document.getElementById("citystate-btn");
-document.getElementsByClassName("button is-info")[0].addEventListener("click", myFunction);
 
-function myFunction() {
+function storeCity() {
 
     var citystate = document.getElementById("citystate").value;
     localStorage.setItem("citystate", citystate);
     console.log(citystate);
 }
+document.getElementsByClassName("button is-info")[0].addEventListener("click", storeCity);
+
+
 
 
 //Event listener set up so that when the user chooses a color that value is stored.

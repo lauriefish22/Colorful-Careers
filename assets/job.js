@@ -1,17 +1,3 @@
-// Pseudo code 
-// choose color store this user variable in local storage
-// type in location store this variable in local storage 
-// on submit button click change locations to other html
-// create an object with answers or create an array that contains different 
-// create an array of objects with color job key value pairs 
-// if statement if usercolor input ==== red then job = red job
-// text content of header is random joke of the day
-// text content of header is information about what each color means 
-//  body of doc contains cards for the first 10 job items 
-
-// reach styling of background is a variation of the color that the user chose
-
-
 
 APIkey = 'cc0e5ff229msha7a08edcb4e2fa7p13c5b7jsn7c2c39bc9ff4';
 let urlQuery = 'https://daddyjokes.p.rapidapi.com/random';
@@ -33,11 +19,8 @@ fetch(urlQuery, {
         console.log(response.joke)
         let newJoke = (response.joke);
         let newJokeContainer = document.getElementById('joke-start');
-        //newJokeContainer.innerHTML = newJoke;
-        // let button = document.getElementById("button");
-        // button.addEventListener('click', function (e) {
         newJokeContainer.innerHTML = newJoke;
-        // });
+        
 
     })
 
@@ -77,7 +60,10 @@ function getJob() {
                 'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
             }
         })
-        .then(response => response.json())
+        .then(function(response){
+            return response.json()
+        })
+         
         .then(function (data) {
             console.log(data)
 
@@ -124,7 +110,7 @@ getJob()
 
 
 
-modal functionality
+// modal functionality
 
 
 $(".modal-button").click(function () {
@@ -176,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         $close.addEventListener('click', () => {
             closeModal($target);
+            location.reload()
         });
     });
 
@@ -185,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (e.keyCode === 27) { // Escape key
             closeAllModals();
+            location.reload()
         }
     });
 });
