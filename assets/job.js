@@ -17,7 +17,7 @@
 APIkey = 'cc0e5ff229msha7a08edcb4e2fa7p13c5b7jsn7c2c39bc9ff4';
 let urlQuery = 'https://daddyjokes.p.rapidapi.com/random';
 
-//function printJoke() {
+
 fetch(urlQuery, {
     method: 'GET',
     headers: {
