@@ -46,7 +46,7 @@ fetch(urlQuery, {
     })
 
 
-}
+
 
 var jobOptions = document.getElementById("job-options")
 function getJob() {
@@ -73,7 +73,7 @@ function getJob() {
         {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'cc0e5ff229msha7a08edcb4e2fa7p13c5b7jsn7c2c39bc9ff4',
+                'X-RapidAPI-Key': '2a85d5b83amsh63ca45e7faf958fp1fa3e8jsnb8946c519ebe',
                 'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
             }
         })
@@ -189,14 +189,3 @@ getJob()
 //     });
 // });
 
-anime({
-    targets: '.button',
-    translateY: [
-        { value: 300, duration: 800 },
-        { value: 0, duration: 800 }
-    ],
-    rotate: {
-        value: '1turn',
-        easing: 'easeInOutSine'
-    }
-});
