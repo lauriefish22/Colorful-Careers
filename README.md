@@ -28,49 +28,90 @@ After you choose a color from the dropdown menu and enter in your location, you 
 We want to take even more stress away from you and make you laugh a bit.  After you submit your information you will be able to have a chuckle at a joke 😂
 
 
-![Site Langing Page](./assets/colorful-readme.gif)
+![Site Langing Page](./assets/images/colorful-readme.gif)
+
 
 
 ## Table of Contents 
 
-* [Code Example](#code-example)
+* [User Stories](#user-stories)
+* [API Deep Dive](#api-deep-dive)
 * [Usage](#usage)
 * [Learning Points](#learning-points)
 * [Author Info](#author-info)
 * [Credits](#credits)
 * [License](#license)
 
+## User Stories
+All of our user stories along with two gifts that represent all the user stories 
 
-## Code Example
+* I want to be able to choose a color that I gravitate towards from a list
+* I want to be able to input my current city so that I am only shown jobs in my area
+![Site Langing Page](./assets/images/colorChoice-cityState.gif)
+
+* I want to be taken to page that lists available jobs when I l submit my color and location
+* I want to see a joke when that page loads
+
+* I want to only see jobs that match my color choice and location
+* I want to be shown a maximum of ten jobs in my area 
+* I want each job card to include the employer, job title, hours and a link to apply
+![Site Langing Page](./assets/images/ten-jobs.gif)
+
+## API Deep Dive
 
 Using fetch to request data from the Jsearch API 
 
+Creating a function to set a value to the variable job that will be used in our query.  Getting our user inputs that will be used for our query from local storage.
 ```JS
-var search = job + " " + city
+function getJob() {
+    var job;
+    var userColor = localStorage.getItem("chosenColor")
+    if (userColor === "Gold") {
+        job = "Lawyer"
+    }
+    if (userColor === "Orange") {
+        job = "Journalist"
+    }
+    if (userColor === "Green") {
+        job = "Web developer"
+    }
+    if (userColor === "Blue") {
+        job = "Mediator"
+    }
+    var city = localStorage.getItem("citystate")
+```
+Our fetch request which returned us a JSON object that we used to render job specific information onto our page
+```
+ var search = job + " " + city
+    // fetch request to jsearch api with search variable and page parameters
     fetch('https://jsearch.p.rapidapi.com/search?query=' + search + '&page=1&num_pages=1',
         {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'cc0e5ff229msha7a08edcb4e2fa7p13c5b7jsn7c2c39bc9ff4',
+                'X-RapidAPI-Key': '2a85d5b83amsh63ca45e7faf958fp1fa3e8jsnb8946c519ebe',
                 'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
             }
         })
-        .then(response => response.json())
+        .then(function(response){
+            return response.json()
+        })
+         
         .then(function (data) {
             console.log(data)
 
-
-            jobOptions.textContent = ""
-            // console.log(data.data)
-            for (var i = 0; i < data.data.length; i++)
-            })
+           
 ```
+![Job API functioning](./assets/images/ten-jobs.gif)
+
 We also experienced new libraries for CSS and JS.  Bulma was used for styling and Anime for JS.  Below are examples of both.
 
 
 **ANIME**
 
 Using anime.js to add animation to a button
+
+Below is a code snippet and an example of the working element.  Anime is a great tool that is used with JavaScript to create animation on an app.
+
 ```anime({
     targets: '.button',
     translateY: [
@@ -82,6 +123,24 @@ Using anime.js to add animation to a button
         easing: 'easeInOutSine'
     }
 });
+```
+
+![assets](./assets/images/anime.gif)
+
+## Joke API
+
+For the Joke, we used Daddy Jokes API from RapidAPI.  The information from the API is shown below.
+
+```joke: "I don’t get why Marvel doesn’t use the Hulk to advertise more. He’s basically one big Banner. "
+success: true
+[[Prototype]]: Object
+script2.js:35
+I don’t get why Marvel doesn’t use the Hulk to advertise more. He’s basically one big Banner.
+```
+
+## User Story:  I want to see a joke pop up
+![Joke function](./assets/images/joke.gif)
+
 ```
 **BULMA**
 
@@ -100,7 +159,7 @@ Using Bulmas prebuilt elements to create a dropdown menu
 Finds job openings based on users location and color choice.  
 
 
-![Landing Page Screen shot](./assets/Screenshot%202023-04-13%20182927.png)
+![Landing Page Screen shot](./assets/images/Screenshot%202023-04-13%20182927.png)
 
 
 ## Learning Points 
