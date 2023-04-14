@@ -1,8 +1,8 @@
-
+// api key for daddy jokes 
 APIkey = 'cc0e5ff229msha7a08edcb4e2fa7p13c5b7jsn7c2c39bc9ff4';
 let urlQuery = 'https://daddyjokes.p.rapidapi.com/random';
 
-//function printJoke() {
+// fetch request for daddy jokes api 
 fetch(urlQuery, {
     method: 'GET',
     headers: {
@@ -17,25 +17,30 @@ fetch(urlQuery, {
     .then(function (response) {
         console.log(response);
         console.log(response.joke)
+        // rendering joke from fetch on page
         let newJoke = (response.joke);
         let newJokeContainer = document.getElementById('joke-start');
         newJokeContainer.innerHTML = newJoke;
         
 
     })
-
+// catching and printing any errors in console
     .catch(function (err) {
         console.error(err);
     })
 
 
 
-
+// pointing to div of job-options in html
 var jobOptions = document.getElementById("job-options")
+
+// creating a function to assign jobs to colors and fetch job with user specific query
 function getJob() {
     var job;
+    // getting the users color choice from local storage
     var userColor = localStorage.getItem("chosenColor")
     console.log("The user chose " + userColor);
+    // if statements to match users choice with jobs 
     if (userColor === "Gold") {
         job = "Lawyer"
     }
@@ -49,9 +54,11 @@ function getJob() {
         job = "Mediator"
     }
     console.log(job)
+    // getting the users location from local storage
     var city = localStorage.getItem("citystate")
-
+// creating variable for query to include the job for color chosen and user location
     var search = job + " " + city
+    // fetch request to jsearch api with search variable and page parameters
     fetch('https://jsearch.p.rapidapi.com/search?query=' + search + '&page=1&num_pages=1',
         {
             method: 'GET',
@@ -67,11 +74,11 @@ function getJob() {
         .then(function (data) {
             console.log(data)
 
-
+// clearing out anything within job options before running through for loop
             jobOptions.textContent = ""
-            // console.log(data.data)
+            // for loop to iterate through all job possibilities posted (max 10 from query)
             for (var i = 0; i < data.data.length; i++) {
-
+// adding bulma card html within div job-options for each job posibility using template literal
                 jobOptions.innerHTML += ` 
     <div class="card column is-3 m-4">
     <div class="card-image">
@@ -105,7 +112,7 @@ function getJob() {
             console.error(err);
         })
 }
-
+// calling function to render user specific job cards 
 getJob()
 
 
