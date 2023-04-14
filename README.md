@@ -28,7 +28,7 @@ After you choose a color from the dropdown menu and enter in your location, you 
 We want to take even more stress away from you and make you laugh a bit.  After you submit your information you will be able to have a chuckle at a joke 😂
 
 
-![Site Langing Page](./site.gif)
+![Site Langing Page](./assets/colorful-readme.gif)
 
 
 ## Table of Contents 
@@ -99,9 +99,8 @@ Using Bulmas prebuilt elements to create a dropdown menu
 
 Finds job openings based on users location and color choice.  
 
-```md
-![alt text](assets/images/screenshot.png)
-```
+
+![Landing Page Screen shot](./assets/Screenshot%202023-04-13%20182927.png)
 
 
 ## Learning Points 
