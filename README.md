@@ -1,36 +1,52 @@
-# grow-your-garden
--[Github](https://github.com/lauriefish22/grow-your-garden)<br>
--[Live Site](https://lauriefish22.github.io/grow-your-garden/)
+# Colorful Careers
+Web application to help users find jobs in their area based on color psychology  
 
+## Technology Used 
 
-## Pic
-![assets](./assets/Screenshot%202023-04-12%20at%206.50.05%20PM.png)
+| Technology Used         | Resource URL           | 
+| ------------- |:-------------:| 
+| HTML    | [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | 
+| CSS     | [https://developer.mozilla.org/en-US/docs/Web/CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)      |   
+| Git | [https://git-scm.com/](https://git-scm.com/)     |    
+| JavaScript | [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)     |  
+| Bulma | [https://bulma.io/documentation/](https://bulma.io/documentation/)     |  
+| Anime.js | [https://animejs.com/documentation/](https://animejs.com/documentation/)     |  
+| Jsearch API | [https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch](https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch)     |  
+| Daddy Jokes API | [https://rapidapi.com/Bmbus/api/daddyjokes/](https://rapidapi.com/Bmbus/api/daddyjokes/)     | 
+| Canva | [https://www.canva.com/](https://www.canva.com/)     |  
 
-```-Kakazi Kitenge```<br>
-```-Shea Schwennicke```<br>
-```-Laurie Fish```
+## Description 
 
+[Visit Colorful Careers](https://lauriefish22.github.io/Colorful-Careers/)
 
-## Description
-Deciding on a career can be one of the most stressful things in your life.  As people the job search and think about possibly going back to school, there is almost always doubt that you aren't making the right choice for yourself and going into a career that isn't meant for you.  We are here to help!  What better way to choose your career than to let our app do it for you?  Our very scientific project will help you show which career you should pursue according to which color you choose on our site.  
+Colorful Careers uses aspects of color psychology testing to match users with career options and job openings in their area.
 
-After you choose a color and enter in your location, you will be shown which career path you should pursue and be able to see if that job is available in your area.  Excited?  Wait. There is more!  
+Deciding on a career can be one of the most stressful things in your life.   Whether it changing careers, just starting out or going back to school there is almost always doubt that you are making the right choice.  We are here to help!  What better way to choose your career than to let our app do it for you? 
+
+After you choose a color from the dropdown menu and enter in your location, you will be shown which career path you should pursue and be able to see what jobs in that field are available in your area.  Excited?  Wait. There is more!  
 
 We want to take even more stress away from you and make you laugh a bit.  After you submit your information you will be able to have a chuckle at a joke 😂
 
 
+![Site Langing Page](./site.gif)
 
-## Technology Used
--[Lodash](https://lodash.com/)<br>
--[Bulma](https://bulma.io/)<br>
--[Anime](https://animejs.com/)<br>
--[Canva](https://www.canva.com/)<br>
+
+## Table of Contents 
+
+* [Code Example](#code-example)
+* [Usage](#usage)
+* [Learning Points](#learning-points)
+* [Author Info](#author-info)
+* [Credits](#credits)
+* [License](#license)
+
 
 ## Code Example
 
-```API's were the focus of this project and here is a great example of using the API for a job search to find careers by location.``` 
+Using fetch to request data from the Jsearch API 
 
-```var search = job + " " + city
+```JS
+var search = job + " " + city
     fetch('https://jsearch.p.rapidapi.com/search?query=' + search + '&page=1&num_pages=1',
         {
             method: 'GET',
@@ -49,10 +65,12 @@ We want to take even more stress away from you and make you laugh a bit.  After 
             for (var i = 0; i < data.data.length; i++)
             })
 ```
-```We also experienced new libraries for CSS and JS.  Bulma was used for styling and Anime for JS.  Below are examples of both.``` 
+We also experienced new libraries for CSS and JS.  Bulma was used for styling and Anime for JS.  Below are examples of both.
+
 
 **ANIME**
 
+Using anime.js to add animation to a button
 ```anime({
     targets: '.button',
     translateY: [
@@ -67,6 +85,7 @@ We want to take even more stress away from you and make you laugh a bit.  After 
 ```
 **BULMA**
 
+Using Bulmas prebuilt elements to create a dropdown menu
 ```<div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
                     <button class="button2" aria-haspopup="true" aria-controls="dropdown-menu">
@@ -76,6 +95,58 @@ We want to take even more stress away from you and make you laugh a bit.  After 
                         </span>
 ```
 
-## Learning Points
+## Usage 
 
-It was great for all of us to explore different libraries.  It can be easy to get used to only one "way" but you never know what you are missing out on if you don't experience other libraries and opportunities to either improve your project or make it easier to build.  It was also great practice in using API's and finding out (the hard way) that you may need to go through multiple API's to find the one that works for your project.  More than anything, it was our first experience in working with a group and not only practicing using github and different branches but about communication and helping each other out when needed.  
+Finds job openings based on users location and color choice.  
+
+```md
+![alt text](assets/images/screenshot.png)
+```
+
+
+## Learning Points 
+
+It was great for all of us to explore different libraries.  It can be easy to get used to only one "way" but you never know what you are missing out on if you don't experience other libraries and opportunities to either improve your project or make it easier to build.  It was also great practice in using API's and finding out (the hard way) that you may need to go through multiple API's to find the one that works for your project.  More than anything, it was our first experience in working with a group and not only practicing using github and different branches but about communication and helping each other out when needed. 
+
+* New js libraries
+* Collaborative Git workflow
+* Server side apis
+* Bulma 
+* Anime.js 
+
+
+
+## Author Info
+
+
+###  Kakazi Kitenge
+
+
+
+###  Shea Schwennicke
+
+
+* [Portfolio](https://sheaschwenn.github.io/Portfolio/)
+* [LinkedIn](https://www.linkedin.com/in/shea-schwennicke-76a378210/)
+* [Github](https://github.com/sheaschwenn)
+
+###  Laurie Fish
+
+
+* [Github](https://github.com/lauriefish22)
+
+
+
+## Credits
+
+We gathered information from [indeed](https://www.indeed.com/career-advice/finding-a-job/color-psychology-test) for our color descriptions and job-color assignments. 
+
+
+## License
+MIT License
+
+For more information please refer to the LICENSE in the repo.
+
+---
+
+© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

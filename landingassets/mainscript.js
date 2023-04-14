@@ -26,6 +26,7 @@ colorInput.addEventListener("click", function (event) {
     var colorChoice = document.getElementById("colorchoice");
     chosenColor = colorChoice.textContent;
     console.log(chosenColor);
+    // setting users chosen color into local storage
     localStorage.setItem("chosenColor", chosenColor);
     colorInput.setAttribute('disabled', true);
 });
@@ -35,16 +36,20 @@ dropdownMenu.addEventListener("click", function (event) {
     colorChoice.innerHTML = chosenColor;
 });
 
+// adding an event listener to city state button 
 cityStateBtn.addEventListener("click", function () {
+    // if there is no color chosen and or citystate input then do nothing
     if (document.getElementById("citystate").value === "") {
         return
     }
     if (!chosenColor) {
         return
     }
+    // if those aren't true then change document location to the job.html
     document.location = "job.html"
 }
 )
+// adding animation to elements with class button
 anime({
     targets: '.button',
     translateY: [
