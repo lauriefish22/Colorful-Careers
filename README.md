@@ -41,6 +41,7 @@ We want to take even more stress away from you and make you laugh a bit.  After 
 * [Author Info](#author-info)
 * [Credits](#credits)
 * [License](#license)
+* [Site Responsiveness](#site-responsiveness)
 
 ## User Stories
 All of our user stories along with two gifts that represent all the user stories 
@@ -160,6 +161,11 @@ Finds job openings based on users location and color choice.
 
 
 ![Landing Page Screen shot](./assets/images/Screenshot%202023-04-13%20182927.png)
+
+
+## Site Responsiveness
+
+![BreakPoints](./assets/images/bkpts.gif)
 
 
 ## Learning Points 
